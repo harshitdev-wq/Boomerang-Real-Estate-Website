@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "P22 Mackinac W01 Book", Georgia, "Times New Roman", serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: #ffffff;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #191919;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #191919;
+  color: #ffffff;
+}
+
+/* ---------- Leaflet map overrides ---------- */
+.leaflet-container {
+  background: #f4f3f3;
+  font-family: var(--font-sans);
+}
+
+.br-pin {
+  background: transparent;
+  border: none;
+}
+.br-pin .pin {
+  transform: translate(-50%, -100%);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  background: #191919;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 5px 10px;
+  border-radius: 9999px;
+  border: 1.5px solid #ffffff;
+  box-shadow: 0 4px 14px rgba(25, 25, 25, 0.28);
+  transition: background 0.2s ease;
+}
+.br-pin .pin:hover {
+  background: #3a3a3a;
+}
+.br-cluster {
+  background: transparent;
+  border: none;
+}
+.br-cluster .c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
+  background: #191919;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 14px rgba(25, 25, 25, 0.32);
+}
+.br-popup .leaflet-popup-content-wrapper {
+  border-radius: 14px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 18px 44px rgba(25, 25, 25, 0.2);
+  background: #ffffff;
+}
+.br-popup .leaflet-popup-content {
+  margin: 0;
+  width: 248px !important;
+}
+.br-popup .leaflet-popup-close-button {
+  display: none;
+}
+.br-popup .leaflet-popup-tip {
+  box-shadow: none;
+}
+.leaflet-control-attribution {
+  font-size: 9px;
+  opacity: 0.7;
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ---------- Forms ---------- */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ---------- Motion ---------- */
+@keyframes br-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.br-fade-up {
+  animation: br-fade-up 0.5s ease both;
+}
+
+@keyframes br-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.br-toast-in {
+  animation: br-toast-in 0.25s ease both;
+}
+
+@keyframes br-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.br-spinner {
+  animation: br-spin 0.8s linear infinite;
+}
