@@ -1,140 +1,207 @@
 # 🏠 Boomerang — Real Estate Platform
 
-> A modern, responsive real-estate experience focused on property discovery, interactive exploration, and a polished frontend experience.
+<p align="center">
+  <strong>A polished real-estate product concept focused on property discovery, exploration, comparison, and agent workflows.</strong><br />
+  Built as a responsive React application with a premium editorial visual direction.
+</p>
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Boomerang-111827?style=for-the-badge)](https://boomerangrealestate.netlify.app/)
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=white)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vite.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+<p align="center">
+  <a href="https://boomerangrealestate.netlify.app/">🌐 Live Demo</a> ·
+  <a href="https://github.com/harshitdev-wq/Boomerang-Real-Estate-Website/issues">🐛 Report an issue</a> ·
+  <a href="https://github.com/harshitdev-wq/Boomerang-Real-Estate-Website/issues">💡 Suggest an improvement</a>
+</p>
 
-## 🌐 Live Demo
-
-**https://boomerangrealestate.netlify.app/**
+<p align="center">
+  <img alt="React" src="https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+</p>
 
 ---
 
-## 📖 About
+## ✦ What is Boomerang?
 
-Boomerang is a frontend-focused real-estate website built to present property information through a clean, premium, and responsive interface.
+Boomerang is a frontend-heavy real-estate platform concept built around one idea:
 
-The project brings together property discovery, listing exploration, interactive maps, galleries, comparison flows, and virtual-tour style experiences in one cohesive application.
+> **Make property discovery feel as considered as the properties themselves.**
 
-It was built with a strong emphasis on **responsive layouts, reusable React components, interactive UI, and a production-style project structure**.
+The interface combines a premium visual system with practical product flows for buyers, renters, agents, and administrators.
 
-## ✨ Highlights
+**Demo notice:** listings, agents, inquiries, statistics, and marketplace information are sample data. This is not a real property marketplace.
 
-- 🏡 Property discovery and listing exploration
-- 🔎 Search and filtering experience
-- 🗺️ Interactive map-based property exploration
-- 📸 Property photo gallery experience
-- 🎥 Virtual-tour style property experience
-- ⚖️ Property comparison interface
-- ❤️ Saved/favourite property interactions
-- 🛠️ Admin-oriented interface
+## 🚀 Product Experience
+
+### For property seekers
+
+- 🔎 Browse and search property listings
+- 🗺️ Explore properties through a map view
+- 🏡 Open detailed property pages
+- 📸 Explore property media and gallery experiences
+- ⚖️ Compare properties side by side
+- ❤️ Save properties for later
+- 📅 Interact with visit/request flows
+
+### For agents
+
+- ➕ Create and manage property listings
+- 💬 Work with inquiries
+- 📅 Review visit requests
+- 📊 Access a dashboard-style workspace
+
+### Platform
+
+- 🛠️ Admin console concept
 - 📚 API documentation interface
-- 📱 Responsive experience across desktop, tablet, and mobile
-- 🧩 Reusable React component architecture
-- ⚡ Vite-powered development and production builds
+- 🔔 Global toast feedback
+- 🧭 Client-side route handling
+- 🧩 Reusable React architecture
+- 📱 Responsive desktop, tablet, and mobile layouts
 
-## 🛠️ Tech Stack
+## 🎨 Design Direction
 
-| Technology | Purpose |
-|---|---|
-| **React** | Component-based frontend development |
-| **TypeScript** | Type-safe application code |
-| **Vite** | Development server and production build tooling |
-| **Tailwind CSS** | Responsive styling and UI development |
-| **Leaflet** | Interactive maps |
-| **Lucide React** | Interface icons |
-| **clsx** | Conditional class handling |
-| **tailwind-merge** | Tailwind class merging |
+The visual language intentionally moves away from the typical real-estate template:
 
-## 📁 Project Structure
+- Editorial typography hierarchy
+- Restrained neutral palette
+- Fine borders instead of heavy shadows
+- Large imagery with controlled aspect ratios
+- Generous whitespace
+- Subtle interaction states
+- Strong responsive spacing discipline
+
+The goal is **premium without becoming visually noisy**.
+
+## 🧱 Architecture
 
 ```text
 src/
-├── assets/          # Project assets
-├── components/      # Reusable UI components
-├── context/         # Shared application state
-├── data/            # Property and application data
-├── lib/             # Utility functions
-├── pages/           # Application pages
-├── App.tsx          # Application root
-├── index.css        # Global styles
-└── main.tsx         # Application entry point
+├── assets/              # Images and static visual assets
+├── components/          # Reusable interface components
+├── context/             # Shared application state
+├── data/                # Demo property and platform data
+├── lib/                 # Routing and utility logic
+├── pages/               # Product-level screens
+│   ├── HomePage
+│   ├── BrowsePage
+│   ├── PropertyPage
+│   ├── ComparePage
+│   ├── DashboardPage
+│   ├── ListingForm
+│   ├── AdminPanel
+│   └── ApiDocsPage
+├── App.tsx              # Application shell and routing
+├── index.css            # Global styles
+└── main.tsx             # React entry point
 
 index.html
 package.json
-package-lock.json
-tsconfig.json
 vite.config.ts
+tsconfig.json
 ```
 
-## 🚀 Getting Started
+The application shell composes navigation, routing, shared state, comparison UI, authentication UI, footer, and toast feedback. The source confirms these are part of the current app structure.
 
-### Prerequisites
+## 🛠️ Tech Stack
 
-- Node.js
+| Technology | Role |
+| --- | --- |
+| **React 19** | Component-driven UI |
+| **TypeScript 5.9** | Type-safe application development |
+| **Vite 7** | Development and production tooling |
+| **Tailwind CSS 4** | Responsive styling |
+| **Leaflet** | Interactive map experience |
+| **Lucide React** | Interface icons |
+| **clsx** | Conditional class composition |
+| **tailwind-merge** | Tailwind utility merging |
+
+## ⚡ Getting Started
+
+### Requirements
+
+- Node.js 18+
 - npm
 
-### Installation
+### Clone
 
 ```bash
 git clone https://github.com/harshitdev-wq/Boomerang-Real-Estate-Website.git
 cd Boomerang-Real-Estate-Website
+```
+
+### Install
+
+```bash
 npm install
 ```
 
-### Run locally
+### Development
 
 ```bash
 npm run dev
 ```
 
-Open the local URL shown by Vite in your browser.
-
-### Create a production build
+### Production build
 
 ```bash
 npm run build
 ```
 
-### Preview the production build
+### Preview
 
 ```bash
 npm run preview
 ```
 
-## 🎯 Project Goals
+## 🌐 Live Demo
 
-Boomerang was built to demonstrate how a modern real-estate frontend can combine multiple property-discovery patterns into a single cohesive experience.
+**[Open Boomerang](https://boomerangrealestate.netlify.app/)**
 
-Key development goals included:
+## 🧠 Engineering Focus
 
-- Building a professional real-estate interface from the ground up
-- Creating reusable and maintainable React components
-- Making the experience responsive across screen sizes
-- Integrating interactive property exploration patterns
-- Structuring the application like a real-world frontend project
-- Practising TypeScript, modern React, Tailwind CSS, and Vite
+This project was built to practise the parts of frontend development that matter once a page grows beyond a single landing screen:
 
-## 📱 Responsive Design
+- Reusable React components
+- Shared application state
+- Route-driven page composition
+- Responsive layout systems
+- Interactive property workflows
+- Modal and drawer interactions
+- Feedback/toast states
+- Map-based exploration
+- Comparison flows
+- Dashboard-style interfaces
+- Maintainable TypeScript structure
 
-The interface is designed for **desktop, tablet, and mobile** viewports, with layouts and interactions adapted to different screen sizes.
+## 📱 Responsive Strategy
 
-## 🚢 Deployment
+The interface is designed around real device constraints rather than a single desktop canvas. Particular attention is given to fluid gutters, responsive grids, image sizing, text wrapping, touch-friendly controls, mobile navigation, horizontal-overflow prevention, and consistent section spacing.
 
-The live application is deployed on **Netlify**.
+## 🔭 Roadmap
 
-**Live:** https://boomerangrealestate.netlify.app/
+- [ ] Real property API integration
+- [ ] Production authentication/backend
+- [ ] Persistent user accounts and saved homes
+- [ ] Real-time inquiry messaging
+- [ ] Production map/search services
+- [ ] Image upload pipeline
+- [ ] Agent verification workflow
+- [ ] Automated testing and CI
 
-## 👨‍💻 Author
+## ⚠️ Demo Data Notice
 
-**Harshit**
+Boomerang is a portfolio/demo project. Property listings, agents, inquiries, statistics, and other marketplace information are sample data and should not be treated as real estate listings or financial information.
 
-GitHub: https://github.com/harshitdev-wq
+## 🤝 Contributing
+
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the contribution workflow.
+
+## 📄 License
+
+This project is released under the **MIT License**. See [`LICENSE`](./LICENSE) for details.
 
 ---
 
-⭐ If you found the project interesting, consider giving the repository a star.
+<p align="center">
+  Built by <strong>Harshit Singh</strong> · Designed to learn by building real product interfaces.
+</p>
